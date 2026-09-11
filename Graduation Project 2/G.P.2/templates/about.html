@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About-MedAnalyzer System</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-UCUhSJeyIT1t9IZ_u6r5NID8T_I4He0bbXXidUBDnhEJ76PaSO1HKpC36fmapfOQBc&usqp=CAU">
+       <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+        <!-- داخل قالب HTML (مثل forgot_password.html) -->
+        <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>About the Project</h1>
+            <h2>Project Title</h2>
+            <p>MedAnalyzer System</p>
+            <h2>Project Idea / Overview</h2>
+            <p>
+              This system allows healthcare providers or users to upload patient data in CSV format, then analyzes key health indicators such as BMI, blood pressure, sugar levels, and more.
+              It automatically detects critical health cases and generates visual graphs and downloadable PDF reports.
+            </p>
+            <h2>Project Goals</h2>
+            <ul>
+              <li>Analyze health data efficiently</li>
+              <li>Automatically identify critical cases</li>
+              <li>Visualize data in a user-friendly way</li>
+              <li>Generate downloadable health reports</li>
+            </ul>
+            <h2>Key Features</h2>
+            <ul>
+              <li>BMI Calculation</li>
+              <li>Blood Pressure Analysis</li>
+              <li>Blood Sugar Monitoring</li>
+              <li>Temperature & Heart Rate Tracking</li>
+              <li>Smoking Status Analysis</li>
+              <li>Gender & Lifestyle-based statistics</li>
+              <li>Graph generation</li>
+              <li>PDF Report Export</li>
+            </ul>
+            <h2>Technologies Used</h2>
+            <ul>
+              <li><strong>Backend:</strong> Python, Pandas, Matplotlib, Seaborn, FPDF, Flask</li>
+              <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Chart.js Library, jsPDF Library</li>
+              <li><strong>Data Format:</strong> CSV</li>
+              <li><strong>Communication:</strong> REST API between frontend and backend</li>
+            </ul>
+            <h2>Team Members</h2>
+            <ul>
+              <li>Amal Alawadi – UI/UX Designer & Frontend Developer</li>  
+              <li>Tamara Malkawi & Sora Mahasneh – Backend Developer and API Integrator</li>
+              <li>Deema Alkhaldi – Machine learning</li>
+            </ul>
+            <h2>Additional Notes</h2>
+            <p class="note">
+              The system is designed for educational purposes and simulates a simplified version of real patient monitoring tools used in healthcare environments.
+            </p>
+          </div>
+    </body>
+</html>
+  

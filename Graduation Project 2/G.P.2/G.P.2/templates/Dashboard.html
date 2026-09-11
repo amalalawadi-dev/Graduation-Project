@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Data Platform</title>
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='Dashboard.js') }}" defer></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">MedAnalyzer System</div>
+  <!-- نموذج البحث -->
+<form id="search-form">
+  <input type="number" id="patient_id" placeholder="Enter Patient ID" required>
+  <button type="submit">Search</button>
+</form>
+
+<!-- مكان عرض نتائج المريض -->
+<div id="search-result"></div>
+
+
+
+
+  <!-- زر تسجيل الخروج باستخدام POST -->
+<form action="/logout" method="POST" style="display: inline;">
+  <button type="submit" class="logout-btn">Logout</button>
+</form>
+
+</header>
+
+
+<main>
+  <div class="card-container">
+    <a href="/Doctors_page" class="card" style="background-image: url('https://i.ibb.co/Q3GRQNQV/Doctors.jpg');">Doctors platform</a>
+    <a href="/patient_data_entry" class="card" style="background-image: url('https://i.ibb.co/dJbNdqwG/Analytic-data.jpg');">Patient Data Entry</a>
+    <a href="/Analytics" class="card" style="background-image: url('https://i.ibb.co/G3xVqPWB/photo-2025-05-23-12-23-26.jpg');">Analytic-data</a>
+    <a href="/about" class="card" style="background-image: url('https://i.ibb.co/23rxsPCk/about.jpg');">about</a>
+  </div>
+</main>
+
+<footer>
+  © 2025 MedAnalyzer. All rights reserved.
+</footer>
+
+</body>
+</html>
+
+ 
+
+
+

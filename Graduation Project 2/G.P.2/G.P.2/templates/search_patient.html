@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard.css') }}">
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">MedAnalyzer System</div>
+</header>
+
+<main style="padding: 40px; max-width: 600px; margin: auto;">
+  <h2>🔍 Search Patient by ID</h2>
+  <form method="POST" action="/search_patient" id="search-form">
+    <input type="text" name="patient_id" id="patient_id" placeholder="Enter Patient ID" required>
+    <button type="submit">Search</button>
+  </form>
+
+  {% if patient %}
+    <h3 style="margin-top: 30px;">Patient Information</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>ID:</strong> {{ patient[0] }}</li>
+      <li><strong>Name:</strong> {{ patient[1] }}</li>
+      <li><strong>Age:</strong> {{ patient[2] }}</li>
+      <li><strong>Gender:</strong> {{ patient[3] }}</li>
+      <li><strong>Height:</strong> {{ patient[4] }} cm</li>
+      <li><strong>Weight:</strong> {{ patient[5] }} kg</li>
+      <li><strong>BMI:</strong> {{ patient[6] }}</li>
+      <li><strong>Systolic BP:</strong> {{ patient[7] }}</li>
+      <li><strong>Diastolic BP:</strong> {{ patient[8] }}</li>
+      <li><strong>Pulse Pressure:</strong> {{ patient[9] }}</li>
+      <li><strong>MAP:</strong> {{ patient[10] }}</li>
+      <li><strong>Heart Rate:</strong> {{ patient[11] }}</li>
+      <li><strong>HRV:</strong> {{ patient[12] }}</li>
+    </ul>
+  {% elif patient is not none %}
+    <p style="margin-top: 20px; color: red;">⚠️ No patient found with this ID.</p>
+  {% endif %}
+</main>
+
+</body>
+</html>
+

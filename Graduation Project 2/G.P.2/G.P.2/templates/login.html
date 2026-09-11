@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login-MedAnalyzer System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://img.freepik.com/premium-vector/medical-care-health-care-icon-concept_313674-557.jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <h1>MedAnalyzer System</h1>
+            <form action="" method="post" id="loginForm" class="fade-in">
+                <label for="email">Email :</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope icon-left"></i>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <label for="password">Password :</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock icon-left"></i>
+                    <input type="password" id="password" name="password" placeholder="password" required>
+                    <i class="fas fa-eye icon-right" id="togglePassword" onclick="togglePassword()"></i>
+                </div>
+
+                <label for="role"> Role :</label>
+                <select id="role" class="user_type" name="role" required onchange="handleRoleChange()">
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="nurse">Nurse</option>
+                    <option value="patient">Patient</option>
+                </select>
+
+                <!-- حقل patient ID الذي يظهر فقط إذا كان الدور Patient -->
+                <div id="patientIdField" style="display: none;">
+                    <label for="patient_id">Patient ID (optional):</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-id-card icon-left"></i>
+                        <input type="text" name="patient_id" id="patient_id" placeholder="Enter your Patient ID">
+                    </div>
+                </div>
+
+                <p class="p1">
+                    <a href="{{ url_for('forgot_password') }}" class="a1">forgot password?</a>
+                </p>
+
+                <button type="submit" id="btn">LOGIN</button>
+                <p class="error">all fields are required</p>
+            </form>
+
+            <p class="create-accaount">Don't have an account ? <a href="{{ url_for('register') }}">Create an account</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript الخاص بتحكم عرض حقل Patient ID -->
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const toggleIcon = document.getElementById("togglePassword");
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            toggleIcon.classList.toggle("fa-eye");
+            toggleIcon.classList.toggle("fa-eye-slash");
+        }
+
+        function handleRoleChange() {
+            const roleSelect = document.getElementById("role");
+            const patientIdField = document.getElementById("patientIdField");
+
+            if (roleSelect.value === "patient") {
+                patientIdField.style.display = "block";
+            } else {
+                patientIdField.style.display = "none";
+                document.getElementById("patient_id").value = "";
+            }
+        }
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const roleSelect = document.getElementById("role");
+    const patientIdGroup = document.getElementById("patientIdGroup");
+    const loginForm = document.getElementById("loginForm");
+
+    // إظهار أو إخفاء حقل الـ patient ID
+    roleSelect.addEventListener("change", function () {
+        if (this.value === "patient") {
+            patientIdGroup.style.display = "block";
+        } else {
+            patientIdGroup.style.display = "none";
+        }
+    });
+
+    // تحقق قبل الإرسال
+    loginForm.addEventListener("submit", function (e) {
+        const role = roleSelect.value;
+        const patientIdInput = document.getElementById("patient_id");
+
+        if (role === "patient" && patientIdInput.value.trim() === "") {
+            e.preventDefault();
+            alert("Please enter your Patient ID.");
+            return false;
+        }
+    });
+});
+</script>
+
+</body>
+</html>

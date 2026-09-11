@@ -1,0 +1,2 @@
+﻿id,PatientID,HeartRate,RespiratoryRate,Timestamp,BodyTemperature,OxygenSaturation,SystolicBloodPressure,DiastolicBloodPressure,Age,Gender,Weight_kg,Height_m,Derived_HRV,Derived_Pulse_Pressure,Derived_BMI,Derived_MAP
+5,110,110,110,110,110,110,110,110,110,Male,70,150,110,110,110,110

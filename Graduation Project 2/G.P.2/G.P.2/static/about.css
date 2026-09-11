@@ -1,0 +1,47 @@
+body{
+    font-family:"Oswald",sans-serif;
+    background-color:#f4f6f8;
+    color:#333;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    background-color:#fff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+h1{
+    text-align:center;
+    color:#3367f6;
+    margin-bottom:30px;
+}
+h2{
+    color:#3367f6;
+    margin-top:30px;
+    margin-bottom:10px;
+    border-left:4px solid #3367f6;
+    padding-left:10px;
+    font-size:1.3rem;
+}
+p{
+    font-size:1rem; /*  حجم الخط يكون مساوي لحجم الخط الأساسي (root font size) /  جعل التصميم متجاوب ومناسب لأي شاشة*/
+    line-height:1.7;/*المسافة العمودية بين أسطر النص داخل الفقرة*/
+    margin-bottom:20px;
+}
+ul{
+    margin-left:20px;
+    margin-bottom:20px;
+}
+ul li{
+    margin-bottom:8px;
+}
+.note{
+    background-color:#f9fafb;
+    padding:15px;
+    border-left:5px solid #3367f6;
+    font-style:italic;
+    border-radius:6px;
+}

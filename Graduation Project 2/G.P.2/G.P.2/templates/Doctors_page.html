@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Doctors page-MedAnalyzer System</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1OpU3p4Qch47iqaHd7oNLgEE8zyY7QvE2A&s">
+        <link rel="stylesheet" href="{{ url_for('static', filename='Doctors_page.css') }}">
+        <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+         <script src="{{ url_for('static', filename='Doctors_page.js') }}" defer></script>
+    </head>
+    <body>
+    <h1>Platform Doctors</h1>
+    <div class="doctors-container">
+        <div class="doctor-card" id="card1">
+            <img src="https://th.bing.com/th/id/OIP.DMF3lp0cgCeGmvjjibiAmwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3" alt="Doctor 1">
+            <h2>Dr. Mohamed Ahmed</h2>
+            <p>Cardiologist</p>
+            <p>20001</p>
+            <button onclick="toggleCard('card1')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong> 0791234567</p>
+                <p><strong>Email:</strong> mohamed.ahmed@clinic.com</p>
+                <p><strong>Experience:</strong> 10 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card2">
+            <img src="https://cdn.pixabay.com/photo/2023/07/15/00/08/ai-generated-8127880_1280.png" alt="Doctor 2">
+            <h2>Dr. Sarah Ali</h2>
+            <p>Neurologist</p>
+           <p>20002</p>
+           <button onclick="toggleCard('card2')">Click to view details</button>
+           <div class="Additional-details">
+            <p><strong>Phone:</strong>0792345678</p>
+            <p><strong>Email:</strong> sarah.ali@clinic.com</p>
+            <p><strong>Experience:</strong> 8 years</p>
+            <p><strong>Work Hours:</strong> Monday to Friday, 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card3">
+            <img src="https://th.bing.com/th/id/OIP.ujmO92VCqmwky02GZjXslwHaHa?rs=1&pid=ImgDetMain" alt="Doctor 3">
+            <h2>Dr. Khaled Mansour</h2>
+            <p>Pediatrician</p>
+            <p>20003</p>
+            <button onclick="toggleCard('card3')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0793456789</p>
+                <p><strong>Email:</strong> khaled.mansour@clinic.com</p>
+                <p><strong>Experience:</strong> 12 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:30 AM - 4:30 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card4">
+            <img src="https://th.bing.com/th/id/OIP.fuAk5xXWjuQXJzlH1780bQHaHa?w=204&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Doctor 4">
+            <h2>Dr. Asmaa Ali</h2>
+            <p>Pharmacist</p>
+            <p>20004</p>
+            <button onclick="toggleCard('card4')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0794567890</p>
+                <p><strong>Email:</strong> asmaa.ali@clinic.com</p>
+                <p><strong>Experience:</strong> 5 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card5">
+            <img src="https://th.bing.com/th/id/OIP.B0yfMsiXhRUwJqn8BADPzwHaHa?w=2000&h=2000&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Sora Ali</h2>
+            <p>Cardiologist</p>
+            <p>20005</p>
+            <button onclick="toggleCard('card5')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0795678901</p>
+                <p><strong>Email:</strong> sora.ali@clinic.com</p>
+                <p><strong>Experience:</strong> 15 years</p>
+                <p><strong>Work Hours:</strong> Monday to Friday, 11:00 AM - 7:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card6">
+            <img src="https://img.freepik.com/premium-photo/cartoon-character-girl-doctor-with-stethoscope-blue-background_639806-1739.jpg" alt="Doctor 4">
+            <h2>Dr. Tamara Mwafaq</h2>
+            <p>Neurologist</p>
+            <p>20006</p>
+            <button onclick="toggleCard('card6')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0781234567</p>
+                <p><strong>Email:</strong> tamara.mwafaq@clinic.com</p>
+                <p><strong>Experience:</strong> 7 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 10:00 AM - 6:00 PM</p>
+            </div>          
+        </div>
+        <div class="doctor-card" id="card7">
+            <img src="https://th.bing.com/th/id/OIP.psWM5EBVvNzggzXZ_qQNggHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Amal Ayman</h2>
+            <p>Pediatrician</p>
+            <p>20007</p>
+            <button onclick="toggleCard('card7')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0782345678</p>
+                <p><strong>Email:</strong> amal.ayman@clinic.com</p>
+                <p><strong>Experience:</strong> 9 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card8">
+            <img src="https://img.freepik.com/premium-photo/cute-cartoon-3d-girl-ware-doctor-cloth-friendly-female-doctor-illustration_862994-64123.jpg?w=2000" alt="Doctor 4">
+            <h2>Dr. Deema Alkhaldi</h2>
+            <p>Family Medicine Physician</p>
+            <p>20008</p>
+            <button onclick="toggleCard('card8')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0783456789</p>
+                <p><strong>Email:</strong> deema.alkhaldi@clinic.com</p>
+                <p><strong>Experience:</strong> 4 years</p>
+                <p><strong>Work Hours:</strong> Monday to Saturday, 9:30 AM - 5:30 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card9">
+            <img src="https://img.freepik.com/premium-photo/little-doctor-boy-ai-generated-image_174191-1994.jpg" alt="Doctor 4">
+            <h2>Dr.Ali Ahmad</h2>
+            <p>Dermatologist</p>
+            <p>20009</p>
+            <button onclick="toggleCard('card9')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0784567890</p>
+                <p><strong>Email:</strong> ali.ahmad@clinic.com</p>
+                <p><strong>Experience:</strong> 11 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 3:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card10">
+            <img src="https://img.freepik.com/premium-photo/cute-beautiful-funny-happy-positive-doctors-nutce-uniform-medicine-animated-clinical-work-care-stethoscope-friendly-smiling-glasses-treatment-psychologist-health_887181-13395.jpg?w=2000" alt="Doctor 4">
+            <h2>Dr. Alaa Youssef</h2>
+            <p>Pulmonologist</p>
+            <p>200010</p>
+            <button onclick="toggleCard('card10')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0785678901</p>
+                <p><strong>Email:</strong> alaa.youssef@clinic.com</p>
+                <p><strong>Experience:</strong> 6 years</p>
+                <p><strong>Work Hours:</strong> Monday to Friday, 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card11">
+            <img src="https://th.bing.com/th/id/OIP.0cyBG6d3OXCgZlrGEDC5EAHaKH?w=1406&h=1920&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Youssef Ameen</h2>
+            <p>Oncologist</p>
+            <p>200011</p> 
+            <button onclick="toggleCard('card11')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0771234567</p>
+                <p><strong>Email:</strong> youssef.ameen@clinic.com</p>
+                <p><strong>Experience:</strong> 14 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 5:00 PM</p>
+            </div>        
+        </div>
+        <div class="doctor-card" id="card12">
+            <img src="https://th.bing.com/th/id/OIP.6CMsPYwsDx6AQaBg8kDldgHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Khalid Ahmad</h2>
+            <p>Internist </p>
+            <p>200012</p>
+            <button onclick="toggleCard('card12')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0772345678</p>
+                <p><strong>Email:</strong> khalid.ahmad@clinic.com</p>
+                <p><strong>Experience:</strong> 16 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card13">
+            <img src="https://img.freepik.com/premium-photo/cartoon-female-doctor-with-stethoscope-her-neck_745528-53765.jpg" alt="Doctor 4">
+            <h2>Dr. Olaa Ahmad</h2>
+            <p>Cardiologist</p>
+            <p>200013</p>
+            <button onclick="toggleCard('card13')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0773456789</p>
+                <p><strong>Email:</strong> olah.ahmad@clinic.com</p>
+                <p><strong>Experience:</strong> 10 years</p>
+                <p><strong>Work Hours:</strong> Monday to Friday, 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card14">
+            <img src="https://img.freepik.com/premium-photo/3d-female-doctor-cartoon-character_1035036-1386.jpg" alt="Doctor 4">
+            <h2>Dr. Sawsan Ameer</h2>
+            <p>Neurologist </p>
+            <p>200014</p>
+            <button onclick="toggleCard('card14')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0774567890</p>
+                <p><strong>Email:</strong> sawsan.ameer@clinic.com</p>
+                <p><strong>Experience:</strong> 8 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:30 AM - 4:30 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card15">
+            <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-lab-coat_42136-1875.jpg" alt="Doctor 4">
+            <h2>Dr. Ameer Fouad</h2>
+            <p>Psychiatrist</p>
+            <p>200015</p>
+            <button onclick="toggleCard('card15')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0775678901</p>
+                <p><strong>Email:</strong> ameer.fouad@clinic.com</p>
+                <p><strong>Experience:</strong> 18 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card16">
+            <img src="https://img.freepik.com/premium-photo/cartoon-female-doctor-character_629534-1444.jpg" alt="Doctor 4">
+            <h2>Dr. Areen Ali</h2>
+            <p>Pulmonologist</p>
+            <p>200016</p>
+            <button onclick="toggleCard('card16')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0796789012</p>
+                <p><strong>Email:</strong> areen.ali@clinic.com</p>
+                <p><strong>Experience:</strong> 5 years</p>
+                <p><strong>Work Hours:</strong> Monday to Saturday, 9:30 AM - 5:30 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card17">
+            <img src="https://img.freepik.com/premium-photo/3d-render-cartoon-doctor-with-stethoscope-briefcase_1142-33092.jpg" alt="Doctor 4">
+            <h2>Dr. Mohammad Ibraheem</h2>
+            <p>Orthopedic Surgeon</p>
+            <p>200017</p> 
+            <button onclick="toggleCard('card17')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0786789012</p>
+                <p><strong>Email:</strong> mohammad.ibraheem@clinic.com</p>
+                <p><strong>Experience:</strong> 20 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:00 AM - 4:00 PM</p>
+            </div>          
+        </div>
+        <div class="doctor-card" id="card18">
+            <img src="https://th.bing.com/th/id/OIP.XuT5lKIVyRYni816J550gQHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Mahmood Esaam</h2>
+            <p>Cardiothoracic Surgeon</p>
+            <p>200018</p>  
+            <button onclick="toggleCard('card18')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0776789012</p>
+                <p><strong>Email:</strong> mahmood.esaam@clinic.com</p>
+                <p><strong>Experience:</strong> 22 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 9:00 AM - 5:00 PM</p>
+            </div>        
+        </div>
+        <div class="doctor-card" id="card19">
+            <img src="https://th.bing.com/th/id/OIP.podo1t1R17W3LNcE5rEZ1QHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Doctor 4">
+            <h2>Dr. Rami Mohammad</h2>
+            <p>ENT Surgeon </p>
+            <p>200019</p>
+            <button onclick="toggleCard('card19')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0797890123</p>
+                <p><strong>Email:</strong> rami.mohammad@clinic.com</p>
+                <p><strong>Experience:</strong> 12 years</p>
+                <p><strong>Work Hours:</strong> Monday to Friday, 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="doctor-card" id="card20">
+            <img src="https://img.freepik.com/premium-photo/cute-cartoon-boy-with-doctor-cloth-3d-character-clear-white-backgroung_862994-73200.jpg" alt="Doctor 4">
+            <h2>Dr. Mohammad Khaled</h2>
+            <p>Gynecologist</p>
+            <p>200020</p>
+            <button onclick="toggleCard('card20')">Click to view details</button>
+            <div class="Additional-details">
+                <p><strong>Phone:</strong>0787890123</p>
+                <p><strong>Email:</strong> mohammad.khaled@clinic.com</p>
+                <p><strong>Experience:</strong> 8 years</p>
+                <p><strong>Work Hours:</strong> Sunday to Thursday, 8:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+        

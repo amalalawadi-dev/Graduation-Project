@@ -1,0 +1,65 @@
+/* Dashboard.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff; /* أزرق فاتح جدًا */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #0077b6; /* أزرق متوسط */
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.4em;
+}
+
+main {
+  background: white;
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.15);
+}
+
+input[type="number"] {
+  border: 1px solid #0077b6;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f87;
+}
+
+h2, h3 {
+  color: #005f87;
+}
+
+ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e0f0f9;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analytics Dashboard - MedAnalyzer System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://spng.pngfind.com/pngs/s/254-2548715_labor-analytics-icon-circle-hd-png-download.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Analytics.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="{{ url_for('static', filename='Analytics.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='ana.js') }}" defer></script>
+</head>
+<body>
+    <h2>🔍 Patient Data Analytics</h2>
+
+    <div class="filter-panel">
+        <div class="filter-group">
+            <label for="patientIdInput">Patient ID:</label>
+            <input type="text" id="patientIdInput" placeholder="Enter Patient ID" name="patient_id" />
+        </div>
+
+        <div>
+            <label>Measurements:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" class="metric-checkbox" value="HeartRate"> Heart Rate</label>
+                <label><input type="checkbox" class="metric-checkbox" value="BodyTemperature"> Body Temp</label>
+                <label><input type="checkbox" class="metric-checkbox" value="OxygenSaturation"> Oxygen Sat</label>
+                <label><input type="checkbox" class="metric-checkbox" value="SystolicBloodPressure"> Systolic BP</label>
+                <label><input type="checkbox" class="metric-checkbox" value="DiastolicBloodPressure"> Diastolic BP</label>
+                <label><input type="checkbox" onclick="selectAllMetrics(this)"> Select All</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards" id="resultsCards">
+        <div class="card">🧠 Avg. Heart Rate: --</div>
+        <div class="card">🌡 Avg. Temp: --</div>
+        <div class="card">🩸 Blood Pressure: --</div>
+    </div>
+
+    <div class="chart-container">
+        <div id="chartsContainer"></div>
+    </div>
+  <!-- إضافة عنصر لعرض التنبؤ -->
+     <div id="predictionResult" style="margin: 15px 0; font-weight: bold;"></div>
+
+    <div class="notes-section">
+        <label for="doctorNotes">📝 Doctor Notes:</label>
+        <textarea id="doctorNotes" rows="5" cols="60" placeholder="Write notes here..."></textarea>
+    </div>
+
+
+    <div class="download-section">
+        <button id="downloadReportBtn">🧾 Download Report</button>
+    </div>
+</body>
+</html>
+
+
+
+
+       
+     
